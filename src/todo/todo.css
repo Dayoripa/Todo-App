@@ -1,0 +1,55 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    Font-size: 18px
+}
+
+.hero{
+    background-image: url(../assets/bg-desktop-dark.jpg);
+    background-color: hsl(220, 98%, 61%);
+    background-size: cover;
+    width: 100%;
+    max-width: 1440px;
+    height: 200px;
+}
+
+.hero:before {
+    content: "";
+    width: 100%;
+    min-height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(90deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+    opacity: 0.5;
+} */
+
+/* body{
+    background-color: #181824;
+    position: relative
+} */
+
+/* .hero{
+    background-image: url(../assets/fondo-header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+h1{
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+} */
