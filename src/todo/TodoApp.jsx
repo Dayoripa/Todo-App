@@ -5,7 +5,7 @@ import { TodoHeader } from './TodoHeader';
 export const TodoApp = () => {
   return (
     <>
-      
+      <TodoHeader />
       <main className='principal'>
         <article>
           <section className='form'>
