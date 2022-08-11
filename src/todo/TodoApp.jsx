@@ -1,6 +1,5 @@
 import './todo.css';
 import { TodoHeader } from './TodoHeader';
-import iconList from '../assets/images/icon-cross.svg';
 
 
 export const TodoApp = () => {
