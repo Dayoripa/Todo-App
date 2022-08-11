@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500;700&display=swap');
-
 body{
     background-color:  hsl(235, 21%, 11%);
     color: hsl(220, 98%, 61%);
@@ -18,8 +16,8 @@ body{
     background-size: cover;
     color: white;
     font-family: 'Roboto', sans-serif;
-    padding-top: 2.5em;
-    height: 200px;
+    padding-top: 2.8em;
+    height: 300px;
     width: 100%;
 }
 
@@ -33,7 +31,7 @@ body{
 .hero:before {
     content: "";
     width: 100%;
-    min-height: 200px;
+    min-height: 250px;
     position: absolute;
     top: 0;
     left: 0;
@@ -43,36 +41,83 @@ body{
 }
 
 .hero__title{
+    font-weight: 500;
+    letter-spacing: 0.3cm;
+    text-transform: uppercase;
     z-index: 1;
 }
 
 .hero__img{
     cursor: pointer;
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     z-index: 1;
 }
 
-/* body{
-    background-color: #181824;
-    position: relative
-} */
+ /* ********************************************** 
+ Estilos para el input 
+ **********************************************  */
 
-/* .hero{
-    background-image: url(../assets/fondo-header.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.principal{
+    background-color: blue;
+    width: 100%;
+}
+article{
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
+.form{
+    background-color: transparent;
+    height: 30%;
+    text-align: center;
+}
 
+form {
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+}
 
-h1{
+.btn{
+    background-color:transparent;
+    border: none;
+    border-radius: 50%;
+    color: hsl(233, 14%, 35%);
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 0 .5em;
+    margin-right: 1em;
     position: absolute;
-    color: #fff;
+    
+    bottom: 0;
+    top: 0.5em;
     z-index: 1;
-} */
+
+}
+
+input {
+    background-color: hsl(237, 14%, 26%);
+    border: none;
+    border-radius: .3em;
+    color: hsl(234, 39%, 85%);
+    font-size: 1em;
+    font-weight: 300;
+    height: 2.7em;
+    margin-top: 1em;
+    outline: none;
+    padding: 0 2em;
+    width: 33em;
+    z-index: 1;
+}
+
+
+.list{
+    background-color: aliceblue;
+}
+
+.todo{
+    padding: 1em;
+}
