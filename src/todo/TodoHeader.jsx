@@ -8,7 +8,7 @@ export const TodoHeader = () => {
           <h1 className='hero__title'>Todo</h1>
           <img className='hero__img' src={iconSun} alt="" />
         </div>
-       <TodoAdd />
+        <TodoAdd />
     </header>
 
   )
