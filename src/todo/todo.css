@@ -33,10 +33,11 @@ body{
     content: "";
     width: 100%;
     min-height: 290px;
+    min-height: 300px;
     position: absolute;
     top: 0;
     left: 0;
-
+    
     background: linear-gradient(90deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     opacity: 0.01;
 }

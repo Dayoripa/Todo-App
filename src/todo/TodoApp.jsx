@@ -1,8 +1,7 @@
 import './todo.css';
 import { TodoHeader } from './TodoHeader';
 import iconList from '../assets/images/icon-check.svg';
-import iconClose from '../assets/images/icon-cross.svg';
-
+import iconClose from '../assets/images/icon-cross.svg'
 
 export const TodoApp = () => {
   return (
