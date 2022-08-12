@@ -37,6 +37,11 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+    min-height: 290px;
+    min-height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
     background: linear-gradient(90deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     opacity: 0.01;
 }
@@ -106,6 +111,7 @@ Estilos del main
 .principal{
     height: 420px;
     width: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -142,6 +148,10 @@ Estilos del main
     border: 1px solid ;
     cursor: pointer;
 }
+
+/* .active{
+    background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+} */
 
 .todo__list{
     display: flex;
@@ -189,7 +199,6 @@ a{
     margin-right: 1em;
 }
 
-
 .active{
     background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
@@ -214,5 +223,3 @@ todo__drag
     text-align: center;
     font-weight: 600;
 }
-
-

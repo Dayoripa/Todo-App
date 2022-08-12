@@ -1,8 +1,8 @@
 import './todo.css';
 import { TodoHeader } from './TodoHeader';
 
-import iconList from '../assets/images/icon-check.svg';
 import iconClose from '../assets/images/icon-cross.svg';
+import iconList from '../assets/images/icon-check.svg';
 
 export const TodoApp = () => {
   return (
@@ -33,7 +33,7 @@ export const TodoApp = () => {
               <div className='todo__container'>
                 <div className='todo__list'>
                     <div className='todo__item'>
-                      <span className='icono__check'><img src=""/></span>
+                     <span className='icono__check'><img src=""/></span>
                       <p className='todo__text'>10 minutes meditation</p>
                     </div>
                     <span className='icono__close'><img src={iconClose} /></span> 
@@ -69,7 +69,6 @@ export const TodoApp = () => {
                   </div>
                </div>
              
-
               <div className='todo__info'>
                 <a href='#'>5 items left</a>
                 <div className='todo__actions'>
@@ -83,8 +82,7 @@ export const TodoApp = () => {
       </main>   
       <section className='todo__drag'>
             <p className='todo__drag--text'>Drag and drop to reorder list</p>
-      </section>
-     
+      </section>    
     </>
   )
 }
