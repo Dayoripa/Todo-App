@@ -4,8 +4,6 @@ import { TodoHeader } from './TodoHeader';
 import iconList from '../assets/images/icon-check.svg';
 import iconClose from '../assets/images/icon-cross.svg';
 
-
-
 export const TodoApp = () => {
   return (
     <>
@@ -15,7 +13,7 @@ export const TodoApp = () => {
               <div className='todo__container'>
                 <div className='todo__list'>
                   <div className='todo__item'>
-                    <span className='icono__check active'><img src="" /></span>
+                    <span className='icono__check'><img src="" /></span>
                     <p className='todo__text'>Complete online JavaScript course</p>
                   </div>
                   <span className='icono__close'><img src={iconClose} /> </span> 
@@ -25,7 +23,7 @@ export const TodoApp = () => {
               <div className='todo__container'>
                 <div className='todo__list'>
                     <div className='todo__item'>
-                      <span className='icono__check active'><img src="" /></span>
+                      <span className='icono__check'><img src="" /></span>
                       <p className='todo__text'>Job around the park 3x </p>
                     </div>
                     <span className='icono__close'><img src={iconClose} /></span> 
@@ -35,7 +33,7 @@ export const TodoApp = () => {
               <div className='todo__container'>
                 <div className='todo__list'>
                     <div className='todo__item'>
-                      <span className='icono__check active'><img src=""/></span>
+                      <span className='icono__check'><img src=""/></span>
                       <p className='todo__text'>10 minutes meditation</p>
                     </div>
                     <span className='icono__close'><img src={iconClose} /></span> 
@@ -56,7 +54,7 @@ export const TodoApp = () => {
                 <div className='todo__list'>
                     <div className='todo__item'>
                       <span className='icono__check active'><img src=""/></span>
-                      <p className='todo__text'>ick up groceries</p>
+                      <p className='todo__text todo__text--throuhg'>ick up groceries</p>
                     </div>
                     <span className='icono__close'><img src={iconClose} /></span> 
                   </div>
@@ -65,7 +63,7 @@ export const TodoApp = () => {
                 <div className='todo__list'>
                     <div className='todo__item'>
                       <span className='icono__check active'><img src=""/></span>
-                      <p className='todo__text'>Complete todo App on Frontend Mentor</p>
+                      <p className='todo__text todo__text--throuhg'>Complete todo App on Frontend Mentor</p>
                     </div>
                     <span className='icono__close'><img src={iconClose} /></span> 
                   </div>
@@ -82,7 +80,11 @@ export const TodoApp = () => {
                 <a href='#'>Clear Completed</a>
               </div>
           </section>
-      </main>    
+      </main>   
+      <section className='todo__drag'>
+            <p className='todo__drag--text'>Drag and drop to reorder list</p>
+      </section>
+     
     </>
   )
 }

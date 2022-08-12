@@ -104,8 +104,8 @@ Estilos del main
 ************************************************** */
 
 .principal{
+    height: 420px;
     width: 100%;
-    background-color: blue;
     display: flex;
     justify-content: center;
 }
@@ -142,11 +142,6 @@ Estilos del main
     border: 1px solid ;
     cursor: pointer;
 }
-
-
-/* .active{
-    background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-} */
 
 .todo__list{
     display: flex;
@@ -194,5 +189,30 @@ a{
     margin-right: 1em;
 }
 
+
+.active{
+    background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.todo__text--throuhg{
+    text-decoration: line-through;
+    opacity: .3;
+}
+
+
 /* ***********************************************
+todo__drag
 ****************************************** */
+
+.todo__drag{
+    padding: 2.5em 0;
+}
+
+.todo__drag--text{
+    color: hsl(233, 14%, 35%);
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
