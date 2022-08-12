@@ -8,7 +8,7 @@ body{
     background-color:  hsl(235, 21%, 11%);
     color: hsl(220, 98%, 61%);
     Font-size: 18px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .hero{
@@ -16,8 +16,9 @@ body{
     background-size: cover;
     color: white;
     font-family: 'Roboto', sans-serif;
-    padding-top: 2.8em;
-    height: 300px;
+    padding-top: 4em;
+    position: relative;
+    height: 290px;
     width: 100%;
 }
 
@@ -31,17 +32,17 @@ body{
 .hero:before {
     content: "";
     width: 100%;
-    min-height: 250px;
+    min-height: 290px;
     position: absolute;
     top: 0;
     left: 0;
 
     background: linear-gradient(90deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-    opacity: 0.1;
+    opacity: 0.01;
 }
 
 .hero__title{
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.3cm;
     text-transform: uppercase;
     z-index: 1;
@@ -58,15 +59,6 @@ body{
  Estilos para el input 
  **********************************************  */
 
-.principal{
-    background-color: blue;
-    width: 100%;
-}
-article{
-    margin: 0 auto;
-    max-width: 1440px;
-}
-
 .form{
     background-color: transparent;
     height: 30%;
@@ -77,47 +69,127 @@ form {
     background-color: transparent;
     border-radius: .3em;
     position: relative;
-    width: 100%;
-    max-width: 1440px;
 }
 
 .btn{
     background-color:transparent;
-    border: none;
+    border: 1px solid hsl(237, 14%, 26%);
     border-radius: 50%;
-    color: hsl(233, 14%, 35%);
     cursor: pointer;
-    font-size: 1.5em;
-    padding: 0 .5em;
-    margin-right: 1em;
+    height: 2.1em;
+    width: 2.1em;
+    margin-left: 2em;
     position: absolute;
-    
-    bottom: 0;
-    top: 0.5em;
+    top: 4em;
     z-index: 1;
-
 }
 
 input {
-    background-color: hsl(237, 14%, 26%);
+    background-color: hsl(235, 24%, 19%);
     border: none;
     border-radius: .3em;
     color: hsl(234, 39%, 85%);
     font-size: 1em;
     font-weight: 300;
-    height: 2.7em;
-    margin-top: 1em;
+    height: 3.3em;
+    margin-top: 2em;
     outline: none;
-    padding: 0 2em;
+    padding: 0 4em;
     width: 33em;
     z-index: 1;
 }
 
+/* **************************************************
+Estilos del main
+************************************************** */
 
-.list{
-    background-color: aliceblue;
+.principal{
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
 }
 
-.todo{
+.todo {
+    background-color: hsl(235, 24%, 19%);
+    border-radius: .3em;
+    position: absolute;
+    top: 13em;
+}
+
+.todo__container{
+    background-color: hsl(235, 24%, 19%);
+    border-radius: .3em .3em 0 0;
+    border-bottom: .1em solid hsl(237, 14%, 26%);
+    list-style: none;
+    padding: 1.1em;
+    width: 33em;
+    height: 4em;
+}
+
+.icono__check{
+    border-radius: 50%;
+    border: .01em solid hsl(237, 14%, 26%);
+    font-size: 1.5em;
+    line-height: 0.2em;
+    margin-left: .3em;
+    padding: 0.3em;
+    height: 1em;
+    width: 1em;
+}
+
+.icono__check:hover{
+    border: 1px solid ;
+    cursor: pointer;
+}
+
+
+/* .active{
+    background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+} */
+
+.todo__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.todo__item{
+   display: flex;
+   align-items: center;
+}
+
+.todo__text{
+    margin-left: 1em;   
+    color: hsla(234, 39%, 85%, 0.795);
+    font-weight: 400;
+}
+
+.todo__text:hover{
+    color: hsl(236, 33%, 92%);
+    cursor: pointer;
+}
+
+.icono__close{
+    cursor: pointer;
+    margin-top: .3em;
+}
+
+.todo__info{
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: space-around;
+    align-items: center;
     padding: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(233, 14%, 35%);
+}
+
+.actions__item{
+    margin-right: 1em;
 }
