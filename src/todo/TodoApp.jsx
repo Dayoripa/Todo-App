@@ -1,88 +1,58 @@
+import { useEffect, useReducer } from 'react';
 import './todo.css';
 import { TodoHeader } from './TodoHeader';
-
-import iconClose from '../assets/images/icon-cross.svg';
-import iconList from '../assets/images/icon-check.svg';
+import { TodoList } from './TodoList';
+import { todoReducer } from './todoReducer';
 
 export const TodoApp = () => {
+
+  const initialState = [
+
+  ];
+
+  const init = () => {
+    return JSON.parse( localStorage.getItem('todos') || [] );
+  }
+
+  const [ todos, dispath ] = useReducer(todoReducer, initialState, init);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos])
+
+  const handleNewTodo = ( todo ) => {
+    const action = {
+      type: '[TODO] Add Todo',
+      payload: todo
+    }
+      dispath( action );
+  }
+
+  const handleDeleteTodo = ( id ) => {
+    dispath({
+      type: '[TODO] Remove Todo',
+      payload: id
+    });
+  }
+
+  const handleToggleTodo = ( id ) => {
+    dispath({
+      type: '[TODO] toggle Todo',
+      payload: id
+    });
+  }
+
   return (
     <>
-      <TodoHeader />
-      <main className='principal'>
-          <section className="todo">
-              <div className='todo__container'>
-                <div className='todo__list'>
-                  <div className='todo__item'>
-                    <span className='icono__check'><img src="" /></span>
-                    <p className='todo__text'>Complete online JavaScript course</p>
-                  </div>
-                  <span className='icono__close'><img src={iconClose} /> </span> 
-                </div>
-                 
-              </div>
-              <div className='todo__container'>
-                <div className='todo__list'>
-                    <div className='todo__item'>
-                      <span className='icono__check'><img src="" /></span>
-                      <p className='todo__text'>Job around the park 3x </p>
-                    </div>
-                    <span className='icono__close'><img src={iconClose} /></span> 
-                  </div>
-              </div>
-
-              <div className='todo__container'>
-                <div className='todo__list'>
-                    <div className='todo__item'>
-                     <span className='icono__check'><img src=""/></span>
-                      <p className='todo__text'>10 minutes meditation</p>
-                    </div>
-                    <span className='icono__close'><img src={iconClose} /></span> 
-                  </div>
-              </div>
-
-              <div className='todo__container'>
-                <div className='todo__list'>
-                    <div className='todo__item'>
-                      <span className='icono__check active'><img src=""/></span>
-                      <p className='todo__text'>Read for I hour</p>
-                    </div>
-                    <span className='icono__close'><img src={iconClose} /></span> 
-                  </div>
-              </div>
-
-              <div className='todo__container'>
-                <div className='todo__list'>
-                    <div className='todo__item'>
-                      <span className='icono__check active'><img src=""/></span>
-                      <p className='todo__text todo__text--throuhg'>ick up groceries</p>
-                    </div>
-                    <span className='icono__close'><img src={iconClose} /></span> 
-                  </div>
-              </div>
-              <div className='todo__container'>
-                <div className='todo__list'>
-                    <div className='todo__item'>
-                      <span className='icono__check active'><img src=""/></span>
-                      <p className='todo__text todo__text--throuhg'>Complete todo App on Frontend Mentor</p>
-                    </div>
-                    <span className='icono__close'><img src={iconClose} /></span> 
-                  </div>
-               </div>
-             
-              <div className='todo__info'>
-                <a href='#'>5 items left</a>
-                <div className='todo__actions'>
-                  <a className='actions__item' href='#'>All</a>
-                  <a  className='actions__item' href='#'>Active</a>
-                  <a className='actions__item' href='#'>Completed</a>
-                </div>
-                <a href='#'>Clear Completed</a>
-              </div>
-          </section>
+      <TodoHeader onNewTodo={ handleNewTodo } />
+      <main className='principal principal__light'>
+        <TodoList todoInit={ todos }
+                  onDeleteTodo={ handleDeleteTodo}
+                  onToggleTodo={ handleToggleTodo } />
       </main>   
-      <section className='todo__drag'>
+      <footer className='todo__drag--dark todo_drag-light'>
             <p className='todo__drag--text'>Drag and drop to reorder list</p>
-      </section>    
+      </footer>    
     </>
   )
 }

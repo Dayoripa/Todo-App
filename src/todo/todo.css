@@ -9,10 +9,10 @@ body{
     color: hsl(220, 98%, 61%);
     Font-size: 18px;
     font-family: 'Josefin Sans', sans-serif;
+    height: 100%;
 }
 
 .hero{
-    background-image: url(../assets/bg-desktop-dark.jpg);
     background-size: cover;
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -20,6 +20,10 @@ body{
     position: relative;
     height: 290px;
     width: 100%;
+}
+
+.hero__dark{
+   background-image: url(../assets/bg-desktop-dark.jpg);
 }
 
 .hero__container{
@@ -109,11 +113,10 @@ Estilos del main
 ************************************************** */
 
 .principal{
-    height: 420px;
-    width: 100%;
-    width: 100%;
     display: flex;
     justify-content: center;
+    height: 30em;
+    width: 100%;
 }
 
 .todo {
@@ -121,6 +124,7 @@ Estilos del main
     border-radius: .3em;
     position: absolute;
     top: 13em;
+    margin-bottom: 5em;
 }
 
 .todo__container{
@@ -133,7 +137,28 @@ Estilos del main
     height: 4em;
 }
 
+
+.todo__info{
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5em;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(233, 14%, 35%);
+}
+
+.actions__item{
+    margin-right: 1em;
+}
+
 .icono__check{
+    background: transparent;
+    border: none;
     border-radius: 50%;
     border: .01em solid hsl(237, 14%, 26%);
     font-size: 1.5em;
@@ -145,13 +170,27 @@ Estilos del main
 }
 
 .icono__check:hover{
-    border: 1px solid ;
+    border: 1px solid hsl(280, 87%, 65%);
     cursor: pointer;
 }
 
+.check__fill{
+    background: linear-gradient(hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+} 
+
+.text__through{
+    text-decoration: line-through;
+}
+
+.image__none{
+    display: none;
+}
+.image-block {
+    display: block;
+} 
 /* .active{
     background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-} */
+}  */
 
 .todo__list{
     display: flex;
@@ -177,31 +216,15 @@ Estilos del main
 }
 
 .icono__close{
+    background: none;
+    border: none;
     cursor: pointer;
     margin-top: .3em;
 }
 
-.todo__info{
-    display: flex;
-    font-size: 14px;
-    font-weight: 600;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1em;
-}
-
-a{
-    text-decoration: none;
-    color: hsl(233, 14%, 35%);
-}
-
-.actions__item{
-    margin-right: 1em;
-}
-
-.active{
+/* .active{
     background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-}
+} */
 
 .todo__text--throuhg{
     text-decoration: line-through;
@@ -213,9 +236,13 @@ a{
 todo__drag
 ****************************************** */
 
-.todo__drag{
+.todo__drag--dark{
     padding: 2.5em 0;
 }
+
+/* .todo_drag-light{
+    background-color: hsl(0, 0%, 98%);;
+} */
 
 .todo__drag--text{
     color: hsl(233, 14%, 35%);
@@ -223,3 +250,20 @@ todo__drag
     text-align: center;
     font-weight: 600;
 }
+
+
+/* .hero__light{
+    background-image: url(../assets/bg-desktop-light.jpg);
+} */
+
+/* .principal__light{
+    background-color: hsl(236, 33%, 92%);
+} */
+
+/* .todo__light{
+    background-color: hsl(0, 0%, 98%);
+} */
+
+/* .todo_drag-light{
+   background-color: hsl(236, 33%, 92%);
+} */
