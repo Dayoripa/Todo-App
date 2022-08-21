@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {TodoApp} from './todo/TodoApp'
+import {TodoApp} from './components/todos/TodoApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

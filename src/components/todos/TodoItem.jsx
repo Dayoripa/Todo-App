@@ -1,5 +1,5 @@
-import iconClose from '../assets/images/icon-cross.svg';
-import iconList from '../assets/images/icon-check.svg';
+import iconClose from '../../assets/images/icon-cross.svg';
+import iconList from '../../assets/images/icon-check.svg';
 
 export const TodoItem = ({ todo, onDeleteTodo, onToggleTodo }) => {
     
@@ -21,7 +21,7 @@ export const TodoItem = ({ todo, onDeleteTodo, onToggleTodo }) => {
           <button
               onClick={ () => onDeleteTodo(todo.id)}
               className="icono__close">
-            <img src={iconClose} />{" "}
+            <img src={iconClose} />
           </button>
         </div>
       </div>

@@ -1,3 +1,14 @@
+:root {
+    --background: hsl(235, 21%, 11%);
+    --background-list: hsl(235, 24%, 19%);
+    --color-list: hsl(233, 14%, 35%);
+    --text-info: hsl(236, 9%, 61%);
+    --text-hover: hsl(234, 39%, 85%);
+    --border-list: hsl(237, 14%, 26%);
+    --input-color: hsl(234, 39%, 85%);
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -5,9 +16,9 @@
 }
 
 body{
-    background-color:  hsl(235, 21%, 11%);
+    background-color:  var(--background);
     color: hsl(220, 98%, 61%);
-    Font-size: 18px;
+    font-size: 18px;
     font-family: 'Josefin Sans', sans-serif;
     height: 100%;
 }
@@ -23,14 +34,19 @@ body{
 }
 
 .hero__dark{
-   background-image: url(../assets/bg-desktop-dark.jpg);
+   background-image: url(../../assets/bg-desktop-dark.jpg);
 }
+
+.hero__light{
+    background-image: url(../assets/bg-desktop-light.jpg);
+ }
 
 .hero__container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 600px;
+    
 }
 
 .hero:before {
@@ -57,16 +73,22 @@ body{
     z-index: 1;
 }
 
-.hero__img{
+.icon__header{
+    background-color: transparent;
+    border: none;
     cursor: pointer;
+    z-index: 1;
+}
+
+.hero__img{
     height: 25px;
     width: 25px;
     z-index: 1;
 }
 
- /* ********************************************** 
- Estilos para el input 
- **********************************************  */
+ /************************************************ 
+    Estilos para el input 
+***********************************************  */
 
 .form{
     background-color: transparent;
@@ -82,7 +104,7 @@ form {
 
 .btn{
     background-color:transparent;
-    border: 1px solid hsl(237, 14%, 26%);
+    border: 1px solid var(--border-list);
     border-radius: 50%;
     cursor: pointer;
     height: 2.1em;
@@ -94,10 +116,10 @@ form {
 }
 
 input {
-    background-color: hsl(235, 24%, 19%);
+    background-color: var(--background-list);
     border: none;
     border-radius: .3em;
-    color: hsl(234, 39%, 85%);
+    color: var(--input-color);
     font-size: 1em;
     font-weight: 300;
     height: 3.3em;
@@ -115,12 +137,11 @@ Estilos del main
 .principal{
     display: flex;
     justify-content: center;
-    height: 30em;
     width: 100%;
 }
 
 .todo {
-    background-color: hsl(235, 24%, 19%);
+    background-color: var(--background-list);
     border-radius: .3em;
     position: absolute;
     top: 13em;
@@ -128,15 +149,14 @@ Estilos del main
 }
 
 .todo__container{
-    background-color: hsl(235, 24%, 19%);
+    background-color: var(--background-list);
     border-radius: .3em .3em 0 0;
-    border-bottom: .1em solid hsl(237, 14%, 26%);
+    border-bottom: .1em solid var(--border-list);
     list-style: none;
     padding: 1.1em;
     width: 33em;
     height: 4em;
 }
-
 
 .todo__info{
     display: flex;
@@ -149,7 +169,7 @@ Estilos del main
 
 a{
     text-decoration: none;
-    color: hsl(233, 14%, 35%);
+    color: var(--text-info);
 }
 
 .actions__item{
@@ -160,7 +180,7 @@ a{
     background: transparent;
     border: none;
     border-radius: 50%;
-    border: .01em solid hsl(237, 14%, 26%);
+    border: .01em solid var(--border-list);
     font-size: 1.5em;
     line-height: 0.2em;
     margin-left: .3em;
@@ -199,6 +219,7 @@ a{
     margin-bottom: 1em;
 }
 
+
 .todo__item{
    display: flex;
    align-items: center;
@@ -206,7 +227,7 @@ a{
 
 .todo__text{
     margin-left: 1em;   
-    color: hsla(234, 39%, 85%, 0.795);
+    color: var(--color-list);
     font-weight: 400;
 }
 
@@ -220,11 +241,12 @@ a{
     border: none;
     cursor: pointer;
     margin-top: .3em;
+    display: none;
 }
 
-/* .active{
-    background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-} */
+.todo__list:hover > button {
+    display: block;
+}
 
 .todo__text--throuhg{
     text-decoration: line-through;
@@ -235,35 +257,146 @@ a{
 /* ***********************************************
 todo__drag
 ****************************************** */
-
 .todo__drag--dark{
-    padding: 2.5em 0;
+    background-color: var(--background);
+    padding: 3em 0;
 }
 
-/* .todo_drag-light{
-    background-color: hsl(0, 0%, 98%);;
-} */
 
 .todo__drag--text{
-    color: hsl(233, 14%, 35%);
+    color: var(--color-list);
     font-size: 14px;
     text-align: center;
     font-weight: 600;
 }
 
 
-/* .hero__light{
+.hero__light{
     background-image: url(../assets/bg-desktop-light.jpg);
-} */
+}
 
-/* .principal__light{
-    background-color: hsl(236, 33%, 92%);
-} */
+/* ***************** MEDIA QUERY***************** */
 
-/* .todo__light{
-    background-color: hsl(0, 0%, 98%);
-} */
+@media (max-width:700px){
+    .hero{
+        height: 265px;
+    }
 
-/* .todo_drag-light{
-   background-color: hsl(236, 33%, 92%);
-} */
+    .hero__container{
+        max-width: 400px;
+    }
+
+    input {
+        font-size: .9em;
+        height: 3.3em;
+        width: 25em;
+    }
+
+    .todo__container{
+        width: 22.3em;
+        height: 3em;
+    }
+
+    .todo__actions{
+        display: none;
+    }
+
+    .todo__info {
+        border-bottom-left-radius: 0.3em;
+        border-bottom-right-radius: 0.3em;
+        font-size: 12px;
+    }
+
+    a{
+        color: var(--color-list);
+    }
+    .todo__text {
+        font-size: 16px;
+    }
+
+    .hero__title {
+        font-size: 1.8em;
+    }
+
+    .btn {
+        height: 1.7em;
+        top: 3.5em;
+        width: 1.7em;
+    }
+
+    .icono__check {
+        font-size: 1.3em;
+    }
+
+}
+
+@media(max-width: 650px){
+
+    .hero__dark {
+        background-image: url(/src/assets/bg-mobile-dark.jpg);
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .hero{
+        height: 230px;
+        padding-top: 3em;
+    }
+
+    .hero:before {
+        min-height: 300px;
+        min-height: 230px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .hero__title {
+        font-size: 1.5em;
+    }
+
+    .hero__container {
+        max-width: 300px;
+    }
+
+    .btn {
+        height: 1.8em;
+        top: 3.5em;
+        width: 1.8em;
+    }
+
+    input {
+        font-size: .9em;
+        height: 3.3em;
+        width: 20em;
+    }
+
+    .todo {
+        top: 11em;
+    }
+    .todo__container{
+        padding: .5em;
+        width: 18em;
+        height: 3em;
+    }
+
+    .todo__actions{
+        display: none;
+    }
+
+    .todo__info {
+        border-bottom-left-radius: 0.3em;
+        border-bottom-right-radius: 0.3em;
+        font-size: 12px;
+    }
+
+    a{
+        color: var(--color-list);
+    }
+    .todo__text {
+        font-size: 12px;
+    }
+
+}
