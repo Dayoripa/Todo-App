@@ -9,8 +9,6 @@ export const TodoApp = () => {
 
   const { todos, todosCount, pendingTodosCount, handleNewTodo, handleDeleteTodo, handleToggleTodo } = useTodos();
 
-  console.log(todosCount)
-
   return (
     <>
       <TodoHeader onNewTodo={ handleNewTodo } />

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import {TodoApp} from './components/todos/TodoApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <TodoApp />
-  </React.StrictMode>
+  // </React.StrictMode>
 )

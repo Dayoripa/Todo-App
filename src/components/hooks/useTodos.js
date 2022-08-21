@@ -3,7 +3,7 @@ import { todoReducer } from '../todos/reducer/todoReducer';
 
 
 const init = () => {
-    return JSON.parse( localStorage.getItem('todos') || [] );
+    return JSON.parse( localStorage.getItem('todos')) || [];
   }
 
 
